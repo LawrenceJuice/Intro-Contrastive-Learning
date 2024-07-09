@@ -18,16 +18,22 @@ This approach allows SimCLR to learn effective visual representations through co
 ### 1.2 Framework
 SimCLR proposes a method for constructing negative samples based on the idea that an input image is randomly transformed through data augmentation to produce two images, $x_i$ and $x_j$. These images are then passed through an encoder to obtain their respective representations, $h_i$ and $h_j$. A nonlinear fully connected layer is then used to derive the final representations, $z_i$ and $z_j$. The learning task is to maximize the similarity between these two representations, $z_i$ and $z_j$, for the same image. Once the network has been trained, $h_i$ and $h_j$ can be used as feature representations of the image for downstream tasks.
 
-![The proposed framework of SimCLR](./images/SimCLR_Framework.png)
+<p align = "center">    
+<img  src="./images/SimCLR_Framework.png" width="600" />
+</p>
 
 ### 1.3 Contrastive Loss
 SimCLR employs a contrastive loss function known as the _NT-Xent_ (Normalized Temperature-scaled Cross Entropy Loss). This loss function ensures that the feature representations of positive pairs are close while those of negative pairs are far apart. The NT-Xent loss is defined as:
 
-![](https://latex.codecogs.com/png.image?\large&space;\dpi{120}\bg{white}\ell_{i,j}=-\log\frac{\exp(\mathrm{sim}(z_i,z_j)/\tau)}{\sum_{k=1}^{2N}\mathrm{1}_{[k\neq&space;i]}\exp(\mathrm{sim}(z_i,z_k)/\tau)})
+<p align = "center">    
+<img  src="./images/NT_Xent_loss.png" width="300" />
+</p>
 
 where 𝜏 is a temperature parameter, _2N_ is the number of samples in a batch, and sim(u,v) denotes the cosine similarity between two vectors 𝑢 and 𝑣 defined as following:
 
-![](./images/SimEqn.png)
+<p align = "center">    
+<img  src="./images/SimEqn.png" width="150" />
+</p>
 
 ### 1.4 Performance and Impacts of SimCLR
 - SimCLR achieves significant improvements over previous methods in self-supervised and semi-supervised learning on ImageNet at that time, when compared to supervised learning methods. It has paved the way for further research in self-supervised learning and has influenced many subsequent works in the domain of contrastive learning. The principles of contrastive learning used in SimCLR have been applied to other domains beyond computer vision, such as such as natural language processing and multi-modal learning.
