@@ -19,9 +19,7 @@ SimCLR proposes a method for constructing negative samples based on the idea tha
 
 ![The proposed framework of SimCLR](./images/SimCLR_Framework.pdf)
 
-
-
-##
+## Contrastive Loss
 SimCLR employs a contrastive loss function known as the _NT-Xent_ (Normalized Temperature-scaled Cross Entropy Loss). This loss function ensures that the feature representations of positive pairs are close while those of negative pairs are far apart. The NT-Xent loss is defined as:
 
 ![](https://latex.codecogs.com/png.image?\large&space;\dpi{120}\bg{white}\ell_{i,j}=-\log\frac{\exp(\mathrm{sim}(z_i,z_j)/\tau)}{\sum_{k=1}^{2N}\mathrm{1}_{[k\neq&space;i]}\exp(\mathrm{sim}(z_i,z_k)/\tau)})
