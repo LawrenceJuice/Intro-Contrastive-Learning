@@ -26,7 +26,7 @@ SimCLR employs a contrastive loss function known as the _NT-Xent_ (Normalized Te
 
 where 𝜏 is a temperature parameter, _2N_ is the number of samples in a batch, and sim(u,v) denotes the cosine similarity between two vectors 𝑢 and 𝑣 defined as following:
 
-![](https://latex.codecogs.com/png.image?\large&space;\dpi{120}\bg{white}(\mathbf{u},\mathbf{v})=\frac{\mathbf{u}^{\mathrm{T}}\mathbf{v}}{\|\mathbf{u}\|\|\mathbf{v}\|})
+![](./images/SimEqn.png)
 
 
 ## References
