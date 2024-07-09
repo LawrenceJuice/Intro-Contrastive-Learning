@@ -13,12 +13,12 @@ As previously mentioned, contrastive learning falls under the umbrella of self-s
 
 This approach allows SimCLR to learn effective visual representations through contrastive learning in a self-supervised manner, leveraging large amounts of unlabeled data without manual labeling. 
 
-![Data augmentation operators used in SimCLR](./images/SimCLR_Data_Augmentation.pdf)
+![Data augmentation operators used in SimCLR](./images/SimCLR_Data_Augmentation.png)
 
 ### 1.2 Framework
 SimCLR proposes a method for constructing negative samples based on the idea that an input image is randomly transformed through data augmentation to produce two images, $x_i$ and $x_j$. These images are then passed through an encoder to obtain their respective representations, $h_i$ and $h_j$. A nonlinear fully connected layer is then used to derive the final representations, $z_i$ and $z_j$. The learning task is to maximize the similarity between these two representations, $z_i$ and $z_j$, for the same image. Once the network has been trained, $h_i$ and $h_j$ can be used as feature representations of the image for downstream tasks.
 
-![The proposed framework of SimCLR](./images/SimCLR_Framework.pdf)
+![The proposed framework of SimCLR](./images/SimCLR_Framework.png)
 
 ### 1.3 Contrastive Loss
 SimCLR employs a contrastive loss function known as the _NT-Xent_ (Normalized Temperature-scaled Cross Entropy Loss). This loss function ensures that the feature representations of positive pairs are close while those of negative pairs are far apart. The NT-Xent loss is defined as:
