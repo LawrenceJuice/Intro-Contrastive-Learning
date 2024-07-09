@@ -9,7 +9,7 @@ As previously mentioned, contrastive learning falls under the umbrella of self-s
 
 - Positive examples: For each input image, SimCLR creates augmented versions through random transformations (e.g., rotation, cropping, color distortion). The original image and one of its transformed versions form a positive pair, as these transformations preserve the image's intrinsic content, making them close in the feature space.
 
-* Negative examples: Negative examples are the transformed versions of other images in the same batch. Since each image is different, their transformed versions should be far apart in the feature space. Thus, each image in the batch forms negative pairs with all other transformed images in the batch.
+- Negative examples: Negative examples are the transformed versions of other images in the same batch. Since each image is different, their transformed versions should be far apart in the feature space. Thus, each image in the batch forms negative pairs with all other transformed images in the batch.
 
 This approach allows SimCLR to learn effective visual representations through contrastive learning in a self-supervised manner, leveraging large amounts of unlabeled data without manual labeling. 
 
@@ -53,11 +53,17 @@ CLIP achieves contrastive learning by jointly training an image encoder and a te
 CLIP is extensively pre-trained using a straightforward yet powerful method that harnesses a dataset containing over 400 million image-text pairs sourced from diverse online repositories. These pairs are curated by querying images with specific terms and capturing their associated text. This extensive pre-training enables CLIP to excel in recognizing a broad spectrum of objects and concepts simply by providing descriptive text prompts, without the need for task-specific fine-tuning.
 
 ### 2.4 Performance and Impacts of CLIP
-- 
+- CLIP presented a novel approach to learning image representations that has not been explored extensively before. It demonstrates the potential of natural language supervision and contrastive learning for computer vision tasks.
+
+- In the CLIP paper, many strong experiments results are provided, showing that CLIP can achieve state-of-the-art performance on various downstream tasks without the need for any additional training data.
+
+- CLIP is highly scalable and efficient, allowing it to learn representations from massive datasets with minimal compute requirements. This makes it practical for real-world applications.
+
+## Conclusion
+In conclusion, SimCLR and CLIP represent significant advancements in contrastive learning. These models have not only advanced the use of unlabeled data but also pioneered cross-modal understanding and generalizable AI. SimCLR's approach to data augmentation and agreement maximization has produced robust, discriminative representations, while CLIP's integration of language and vision has redefined zero-shot learning and multimodal applications. As we continue to build upon the foundation laid by SimCLR and CLIP, they promise a future where AI systems are more adaptable and human-like.
 
 
-
-# References
+## References
 [1] Chen, T., Kornblith, S., Norouzi, M., & Hinton, G. (2020, November). A simple framework for contrastive learning of visual representations. _In International conference on machine learning_ (pp. 1597-1607).
 
 [2] Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., ... & Sutskever, I. (2021, July). Learning transferable visual models from natural language supervision. _In International conference on machine learning_ (pp. 8748-8763).
