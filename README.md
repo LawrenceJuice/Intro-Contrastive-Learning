@@ -1,7 +1,7 @@
 # Simple Introduction to Contrastive Learning (Preparaing)
 Contrastive learning is a self-supervised learning technique that has gained significant traction in the machine learning community. Its primary goal is to learn effective representations of data without the need for labeled samples. In contrastive learning, the model is typically trained using a loss function that encourages the representation of similar sample to be close in the feature space while pushing the representations of dissimilar sample farther apart. This approach leverages data augmentation techniques to create positive pairs from the same data instance and negative pairs from different instances.
 
-Various frameworks and algorithms have been proposed for Contrastive learning. Among these methods, SimCLR (A Simple Framework for Contrastive Learning of Visual Representations) <sup>[1]</sup> stands out as a remarkable work. SimCLR learns representations by maximizing agreement between differently augmented views of the same data example using a contrastive loss in the latent space. It not only simplifies the process of contrastive learning but also significantly improves the performance of visual representation learning. 
+Various frameworks and algorithms have been proposed for Contrastive learning. Among these methods, **SimCLR (A Simple Framework for Contrastive Learning of Visual Representations) <sup>[1]</sup>** stands out as a remarkable work. SimCLR learns representations by maximizing agreement between differently augmented views of the same data example using a contrastive loss in the latent space. It not only simplifies the process of contrastive learning but also significantly improves the performance of visual representation learning. 
 
 ## Data Augmentation
 As previously mentioned, contrastive learning falls under the umbrella of self-supervised learning. Since we do not have readily available labeled data, we need to construct similar data (positive examples) and dissimilar data (negative examples) ourselves. So, how does SimCLR go about building these two types of data? In SimCLR, positive and negative examples are constructed as follows:
@@ -28,6 +28,12 @@ where 𝜏 is a temperature parameter, _2N_ is the number of samples in a batch,
 
 ![](./images/SimEqn.png)
 
+## Performance and Impact
+- SimCLR achieves significant improvements over previous methods in self-supervised and semi-supervised learning on ImageNet at that time, when compared to supervised learning methods. It has paved the way for further research in self-supervised learning and has influenced many subsequent works in the domain of contrastive learning. The principles of contrastive learning used in SimCLR have been applied to other domains beyond computer vision, such as such as natural language processing and multi-modal learning.
+ 
+- SimCLR proposed a symmetric architecture for contrastive learning which is relatviely simple and effective. Furthermore, the structural framework developed by SimCLR has emerged as a canonical element in various other models employing contrastive learning techniques.
+ 
+- SimCLR has demonstrated that self-supervised learning methods can scale effectively with larger datasets and models.
 
 ## References
 [1] Chen, T., Kornblith, S., Norouzi, M. &amp; Hinton, G.. (2020). A Simple Framework for Contrastive Learning of Visual Representations. <i>Proceedings of the 37th International Conference on Machine Learning</i>, in <i>Proceedings of Machine Learning Research</i> 119:1597-1607.
