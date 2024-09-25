@@ -1,4 +1,4 @@
-# Simple Introduction to Contrastive Learning (Preparaing)
+# Simple Introduction to Contrastive Learning
 Contrastive learning is a self-supervised learning technique that has gained significant traction in the machine learning community. Its primary goal is to learn effective representations of data without the need for labeled samples. In contrastive learning, the model is typically trained using a loss function that encourages the representation of similar sample to be close in the feature space while pushing the representations of dissimilar sample farther apart. This approach leverages data augmentation techniques to create positive pairs from the same data instance and negative pairs from different instances.
 
 ## 1 SimCLR
